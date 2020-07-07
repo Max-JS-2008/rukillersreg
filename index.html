@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rukillers, войти в клан</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body {
+		background: black;
+	}
+	h1 {
+		color: #fff;
+	}
+	input {
+		font-size: 20px;
+		margin-top: 15px;
+		width: 500px;
+	}
+</style>
+<script type="text/javascript">
+	function sendmsg() {
+		let url = 'https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/sendMessage?chat_id=1108316101&text=ФИО: ' + in1.value + ' возраст: ' + in2.value + ' время вступления: ' + in4.value;
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", url);
+		xhttp.send();
+		alert('заявка отправлена')
+	}
+</script>
+<body>
+	<h1 align="center">чтобы попасть в банду заполни анкету</h1>
+	<p align="center">
+	<input type="text" name="input1" id="in1" value="ваше имя, фамилия"><br>
+	<input type="text" name="input2" id="in2" value="ваш возраст"> <br>
+	<input type="text" name="input2" id="in4" value="укажите дату и время когда хотите вступить"> <br>
+	<input type="button" name="input3" id="in3" value="ОТПРАВИТЬ ЗАЯВКУ" onclick="sendmsg()">
+	</p>
+</body>
+</html>
